@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Meus Estudos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #0072ff;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			color: white;
+		}
+
+		.container {
+			margin: auto;
+			max-width: 400px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+
+		table th,
+		table td {
+			border: 1px solid #ddd;
+			padding: 10px;
+			text-align: center;
+			font-size: 14px;
+		}
+
+		table th {
+			background-color: #f2f2f2;
+			font-weight: normal;
+		}
+
+		.check {
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			border: 1px solid #ddd;
+			margin-right: 10px;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+
+		.check.checked {
+			background-color: #0072ff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Meus Estudos</h1>
+	<div class="container">
+		<table>
+			<thead>
+				<tr>
+					<th>Disciplina</th>
+					<th>Horário</th>
+					<th>Estudou?</th>
+					<th>Completo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Inglês</td>
+					<td>Qualquer horário</td>
+					<td><span class="check"></span></td>
+					<td><span class="check"></span></td>
+				</tr>
+				<tr>
+					<td>Coreano</td>
+					<td>Qualquer horário</td>
+					<td><span class="check"></span></td>
+					<td><span class="check"></span></td>
+				</tr>
+				<tr>
+					<td>Faculdade de Marketing</td>
+					<td>19:00 às 21:00</td>
+					<td><span class="check"></span></td>
+					<td><span class="check"></span></td>
+				</tr>
+				<tr>
+					<td>Produção Musical (FL Studio)</td>
+					<td>00:00 às 1:30</td>
+					<td><span class="check"></span></td>
+					<td><span class="check"></span></td>
+				</tr>
+				<tr>
+					<td>Produção</td>
+					<td>Qualquer</td>
+					<td><span class="check"></span></td>
+					<td><span class="check"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		let checks = document.querySelectorAll('.check');
+		for (let i = 0; i < checks.length; i++) {
+			checks[i].addEventListener('click', function() {
+				this.classList.toggle('checked');
+			});
+		}
+	</script>
+</body>
+</html>
